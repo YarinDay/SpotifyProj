@@ -29,7 +29,6 @@ export function loadStations(filterBy = null) {
     return async (dispatch) => {
         try {
             const stations = await stationService.query(filterBy)
-            // console.log('Stations from DB:', stations)
             dispatch({
                 type: 'SET_STATIONS',
                 stations
